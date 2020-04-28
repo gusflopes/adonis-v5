@@ -32,4 +32,5 @@ Route.group(() => {
 
 Route.group(() => {
   Route.resource('clients', 'ClientsController').apiOnly()
+  Route.resource('clients.telephones', 'TelephonesController').apiOnly()
 }).middleware(['checkJwt'])
