@@ -1,0 +1,33 @@
+{
+  "name": "adonis-v5",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node ace build",
+    "start": "node ace serve --watch",
+    "lint": "eslint . --ext=.ts"
+  },
+  "devDependencies": {
+    "@adonisjs/assembler": "^2.0.0",
+    "adonis-preset-ts": "^1.0.4",
+    "eslint": "^6.8.0",
+    "eslint-plugin-adonis": "^1.0.9",
+    "pino-pretty": "^4.0.0",
+    "typescript": "^3.8.3",
+    "youch": "^2.0.10",
+    "youch-terminal": "^1.0.0"
+  },
+  "dependencies": {
+    "@adonisjs/ace": "^6.0.0",
+    "@adonisjs/core": "^5.0.0-preview-rc",
+    "@adonisjs/fold": "^6.0.0",
+    "@adonisjs/lucid": "^8.0.3",
+    "@phc/argon2": "<2.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "luxon": "^1.23.0",
+    "pg": "^8.0.3",
+    "proxy-addr": "^2.0.6",
+    "reflect-metadata": "^0.1.13",
+    "source-map-support": "^0.5.19"
+  }
+}
