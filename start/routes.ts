@@ -26,9 +26,9 @@ Route.get('/', async () => {
 
 // Public Routes
 Route.group(() => {
-  Route.post('users', 'UsersController.store')
-  Route.post('sessions', 'SessionsController.login')
-})
+  Route.post('register', 'SessionsController.register')
+  Route.post('login', 'SessionsController.login')
+}).prefix('auth')
 
 Route.group(() => {
   Route.resource('clients', 'ClientsController').apiOnly()
