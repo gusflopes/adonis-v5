@@ -26,7 +26,7 @@ export default class ClientsController {
       }
       return client
     } catch (err) {
-      throw new NotFoundException('Cliente não localizado.', 404)
+      throw new NotFoundException('Cliente não localizado.')
     }
   }
 
@@ -42,7 +42,7 @@ export default class ClientsController {
 
       return client
     } catch (err) {
-      throw new NotFoundException('Cliente não localizado.', 404)
+      throw new NotFoundException('Cliente não localizado.')
     }
   }
 
@@ -52,7 +52,7 @@ export default class ClientsController {
       await Client.query().where({id: id}).delete()
       return ctx.response.status(204)
     } catch (err) {
-      throw new NotFoundException('Cliente não localizado.', 404)
+      throw new NotFoundException('Cliente não localizado.')
     }
   }
 }

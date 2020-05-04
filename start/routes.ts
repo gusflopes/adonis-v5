@@ -38,5 +38,6 @@ Route.group(() => {
 
 Route.group(() => {
   Route.resource('clients', 'ClientsController').apiOnly()
-  Route.resource('clients.telephones', 'TelephonesController').apiOnly()
+  Route.resource('clients.telephones', 'TelephonesController').apiOnly().except(['show'])
+  Route.resource('clients.addresses', 'AddressesController').apiOnly().except(['show'])
 }).middleware(['checkJwt'])
