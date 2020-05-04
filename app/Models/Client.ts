@@ -8,10 +8,11 @@ export default class Client extends BaseModel {
   @column() public name: string
   @column() public email: string
   @column() public cpfCnpj: string
-  @column({
-    // serializeAs: 'birthDate',
-    // serialize: (value: DateTime) => value ? value.toFormat('yyyy-MM-dd') : value,
-  }) public birth_date: string
+  @column.date({
+    // serializeAs: 'birth_date',
+    // *** Remember to change both Model and Validator if using different format ***
+    serialize: (value: DateTime) => value ? value.toFormat('yyyy-MM-dd') : value,
+  }) public birthDate: DateTime
 
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime

@@ -28,7 +28,7 @@ export default class ClientValidator {
     name: schema.string(),
     email: schema.string.optional(),
     cpf_cnpj: schema.string.optional(),
-    birth_date: schema.string.optional(),
+    birth_date: schema.date.optional({format: 'yyyy-MM-dd'}),
   })
 
   /**

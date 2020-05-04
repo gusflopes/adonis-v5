@@ -1,6 +1,6 @@
 import BaseSchema from '@ioc:Adonis/Lucid/Schema'
 
-export default class TClients extends BaseSchema {
+export default class Clients extends BaseSchema {
   protected tableName = 'clients'
 
   public async up () {
@@ -11,7 +11,7 @@ export default class TClients extends BaseSchema {
       table.string('name').notNullable(),
       table.string('email'),
       table.string('cpf_cnpj'),
-      table.string('birth_date'),
+      table.date('birth_date'),
 
       table.timestamps(true)
     })
