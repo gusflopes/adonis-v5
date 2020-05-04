@@ -8,7 +8,7 @@
     "lint": "eslint . --ext=.ts"
   },
   "devDependencies": {
-    "@adonisjs/assembler": "^2.0.0",
+    "@adonisjs/assembler": "^2.0.3",
     "@types/jsonwebtoken": "^8.3.9",
     "adonis-preset-ts": "^1.0.4",
     "eslint": "^6.8.0",
@@ -19,10 +19,10 @@
     "youch-terminal": "^1.0.0"
   },
   "dependencies": {
-    "@adonisjs/ace": "^6.0.0",
-    "@adonisjs/core": "^5.0.0-preview-rc",
-    "@adonisjs/fold": "^6.0.0",
-    "@adonisjs/lucid": "^8.0.3",
+    "@adonisjs/ace": "^6.9.2",
+    "@adonisjs/core": "^5.0.0-preview-rc-1.5",
+    "@adonisjs/fold": "^6.3.5",
+    "@adonisjs/lucid": "^8.1.0",
     "@phc/argon2": "<2.0.0",
     "jsonwebtoken": "^8.5.1",
     "luxon": "^1.23.0",
