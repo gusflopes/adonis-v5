@@ -1,5 +1,6 @@
 import { Exception } from '@poppinss/utils'
-import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
+import {HttpContextContract} from '@ioc:Adonis/Core/HttpContext'
+
 /*
 |--------------------------------------------------------------------------
 | Exception
@@ -9,12 +10,12 @@ import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 | a status code and error code for every exception.
 |
 | @example
-| new {{ filename }}('message', 500, 'E_RUNTIME_EXCEPTION')
+| new AuthorizationException('message', 500, 'E_RUNTIME_EXCEPTION')
 |
 */
-export default class NotFoundException extends Exception {
+export default class AuthorizationException extends Exception {
   constructor (message: string) {
-    super(message, 404, 'E_NOTFOUND_EXCEPTION')
+    super(message, 401, 'E_AUTHORIZATION_EXCEPTION')
   }
 
   /**
