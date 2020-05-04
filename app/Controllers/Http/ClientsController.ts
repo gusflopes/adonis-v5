@@ -21,6 +21,9 @@ export default class ClientsController {
     const {id} = ctx.params
     try {
       const client = await Client.find(id)
+      if (!client) {
+        throw new NotFoundException('Cliente não localizado.')
+      }
       return client
     } catch (err) {
       throw new NotFoundException('Cliente não localizado.', 404)
@@ -47,7 +50,6 @@ export default class ClientsController {
     const {id} = ctx.params
     try {
       await Client.query().where({id: id}).delete()
-
       return ctx.response.status(204)
     } catch (err) {
       throw new NotFoundException('Cliente não localizado.', 404)

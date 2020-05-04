@@ -11,7 +11,7 @@ export default class Telephones extends BaseSchema {
 
       table.string('ddd').notNullable(),
       table.string('number'),
-      table.boolean('primary'),
+      table.boolean('primary').defaultTo(false),
 
       table.foreign('client_id').references('id').inTable('clients').onDelete('cascade').onUpdate('cascade'),
 
