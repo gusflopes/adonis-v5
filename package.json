@@ -5,7 +5,10 @@
   "scripts": {
     "build": "node ace build",
     "start": "node ace serve --watch",
-    "lint": "eslint . --ext=.ts"
+    "lint": "eslint . --ext=.ts",
+    "pretest": "DB_NAME=test node ace migration:run",
+    "test": "node build/japaFile.js || :",
+    "posttest": "DB_NAME=test node ace migration:rollback"
   },
   "devDependencies": {
     "@adonisjs/assembler": "^2.0.3",
@@ -13,7 +16,10 @@
     "adonis-preset-ts": "^1.0.4",
     "eslint": "^6.8.0",
     "eslint-plugin-adonis": "^1.0.9",
+    "get-port": "^5.1.1",
+    "japa": "^3.0.1",
     "pino-pretty": "^4.0.0",
+    "supertest": "^4.0.2",
     "typescript": "^3.8.3",
     "youch": "^2.0.10",
     "youch-terminal": "^1.0.0"
