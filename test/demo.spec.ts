@@ -7,18 +7,12 @@ import db from '@ioc:Adonis/Lucid/Database'
 
 test.group('Demo Tests', (group) => {
   group.before(() => {
-    process.env.ENV_SILENT = 'true'
   })
   group.beforeEach(() => {
-    process.env.NODE_ENV = 'testing'
   })
   group.after(async () => {
-    delete process.env.ENV_SILENT
-    delete process.env.APP_KEY
   })
   group.afterEach(async () => {
-    delete process.env.NODE_ENV
-    // Truncate Table users after each test
     db.connection().truncate('users', true)
   })
 

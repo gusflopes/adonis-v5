@@ -21,15 +21,27 @@ This template use the most recent @AdonisJs packages and will be constantly upda
 It was built with the following specs:
 
 1- User Entity (name, email, password)
+
 2- Register/Login using **Email** and **Password** as credentials
+
 3- JWT Authentication (Token generation and middleware)
+
 4- Client Entity: just basic setup but handling **birth_date** and formatting dates.
+
 5- Address Entity: with relationship to User (belongsTo - 1:1)
+
 6- Telephone Entity: with relationship to User (belongsTo - n:1)
+
 7- All the relationships are bidirectional (belongsTo / hasOne or belongsTo / hasMany)
 
 ## Other stuff
+### Insomnia File
 This template comes bundled with an [Insomnia file](https://github.com/gusflopes/adonis-v5/blob/master/insomnia.json) to help you get started using [Insomnia](https://insomnia.rest/download/)
+
+### Testing with Japa + SuperTest
+We've made a small setup to run tests on this project. The idea was not to write all tests for the sample, but at least a starting point to write your own tests.
+
+Just checkout this [README](./docs/Setting-up-tests-with-Japa.md)
 
 ## Credits
 Credits first of all to the creators of [AdonisJs](https://github.com/adonisjs), but this template was developed by [@gusflopes](https://github.com/gusflopes)

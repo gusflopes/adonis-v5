@@ -11,6 +11,8 @@ configure({
     const port = await getPort()
     process.env.PORT = String(port)
     process.env.DB_NAME = 'test'
+    process.env.ENV_SILENT = 'true'
+    process.env.NODE_ENV = 'testing'
 
     const { Ignitor } = await import('@adonisjs/core/build/src/Ignitor')
     await new Ignitor(__dirname).httpServer().start()
