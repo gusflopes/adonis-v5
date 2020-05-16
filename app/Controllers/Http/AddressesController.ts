@@ -28,7 +28,7 @@ export default class AddressesController {
     const { client_id } = ctx.params
     const client = await Client.query().where({id: client_id}).preload('address').first()
 
-    const address = await Address.query().where('clientId', client_id).preload('client').first()
+    // const address = await Address.query().where('clientId', client_id).preload('client').first()
     if (!client!.address) {
       throw new NotFoundException('Address not found.')
     }
