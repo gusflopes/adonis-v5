@@ -5,6 +5,7 @@
   "scripts": {
     "build": "node ace build",
     "start": "node ace serve --watch",
+    "dev:debug": "node ace serve --watch --node-args=\"--inspect\"",
     "lint": "eslint . --ext=.ts",
     "pretest": "DB_NAME=test node ace migration:run",
     "test": "node build/japaFile.js || :",
