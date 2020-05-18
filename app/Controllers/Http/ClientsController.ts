@@ -4,7 +4,7 @@ import ClientValidator from 'App/Validators/ClientValidator'
 import NotFoundException from 'App/Exceptions/NotFoundException'
 
 export default class ClientsController {
-  public async index (ctx: HttpContextContract) {
+  public async index () {
     const clients = await Client.all()
     return clients
   }

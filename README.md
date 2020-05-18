@@ -15,6 +15,8 @@ $ yarn install
 $ yarn start
 ```
 
+**You could also use VS Code Debug just running this script instead: `yarn dev:debug`**
+
 ## Content
 This template use the most recent @AdonisJs packages and will be constantly updated to reflect the current Alpha Release Version.
 
