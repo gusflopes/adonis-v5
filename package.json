@@ -30,7 +30,7 @@
     "@adonisjs/fold": "^6.3.5",
     "@adonisjs/lucid": "^8.1.0",
     "@phc/argon2": "<2.0.0",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "luxon": "^1.23.0",
     "pg": "^8.0.3",
     "proxy-addr": "^2.0.6",
